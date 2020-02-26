@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/window-splitter/static/css/main.65a6af82.chunk.css",
+    "main.js": "/window-splitter/static/js/main.2d9b4cdd.chunk.js",
+    "main.js.map": "/window-splitter/static/js/main.2d9b4cdd.chunk.js.map",
+    "runtime-main.js": "/window-splitter/static/js/runtime-main.21a02573.js",
+    "runtime-main.js.map": "/window-splitter/static/js/runtime-main.21a02573.js.map",
+    "static/js/2.232d8e9a.chunk.js": "/window-splitter/static/js/2.232d8e9a.chunk.js",
+    "static/js/2.232d8e9a.chunk.js.map": "/window-splitter/static/js/2.232d8e9a.chunk.js.map",
+    "index.html": "/window-splitter/index.html",
+    "precache-manifest.ccb7c60ee8a061a3e8b7bed05f667c8f.js": "/window-splitter/precache-manifest.ccb7c60ee8a061a3e8b7bed05f667c8f.js",
+    "service-worker.js": "/window-splitter/service-worker.js",
+    "static/css/main.65a6af82.chunk.css.map": "/window-splitter/static/css/main.65a6af82.chunk.css.map",
+    "static/js/2.232d8e9a.chunk.js.LICENSE.txt": "/window-splitter/static/js/2.232d8e9a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21a02573.js",
+    "static/js/2.232d8e9a.chunk.js",
+    "static/css/main.65a6af82.chunk.css",
+    "static/js/main.2d9b4cdd.chunk.js"
+  ]
+}
