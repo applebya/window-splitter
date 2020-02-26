@@ -14,7 +14,7 @@ context('Window Frame Dragging', () => {
 
         cy.get('.WindowSplitter-FrameInner')
             .first()
-            .should('have.css', 'width', '299.390625px');
+            .should('have.css', 'width', '496px');
     });
 
     it('drags the divider in the partial-width window', () => {
