@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import FrameInner from './FrameInner';
 import FrameContainer from './FrameContainer';
 
-const Frame: React.FC = ({ container, ...rest }) => {
+type FrameProps = {
+    container?: boolean;
+};
+
+const Frame: React.FC<FrameProps> = ({ container, ...rest }) => {
     const Component = container ? FrameContainer : FrameInner;
 
     return <Component {...rest} />;

@@ -28,10 +28,22 @@ const Wrapper = styled.div.attrs({
     }
 `;
 
+type PositionState = {
+    width: number | null;
+    left: number | null;
+};
+
 // Custom hook to get the frame container's width & left positioning
-const useWrapperWidth = () => {
-    const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
-    const [state, setState] = useState({ width: null, leftOffset: null });
+const useWrapperPosition = (): [
+    React.MutableRefObject<HTMLDivElement>,
+    number | null,
+    number | null
+] => {
+    const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
+    const [state, setState] = useState<PositionState>({
+        width: null,
+        left: null
+    });
 
     useEffect(() => {
         if (ref && ref.current) {
@@ -48,11 +60,15 @@ const useWrapperWidth = () => {
 };
 
 const FrameContainer: React.FC = props => {
-    const { container, children, ...rest } = props;
+    const { children, ...rest } = props;
 
-    const [widthPercent, setWidthPercent] = useState(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [wrapperRef, width, left] = useWrapperWidth();
+    if (!(children instanceof Array) || children.length < 2) {
+        throw new Error('<FrameContainer/> must contain 2 <Frame/> children');
+    }
+
+    const [widthPercent, setWidthPercent] = useState<number | null>(null);
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [wrapperRef, width, left] = useWrapperPosition();
 
     const handleMouseDown = () => {
         setIsDragging(true);
@@ -64,6 +80,8 @@ const FrameContainer: React.FC = props => {
 
     const handleMouseMove = useCallback(
         ({ clientX }) => {
+            if (!left || !width) return;
+
             setWidthPercent(((clientX - left) / width) * 100);
         },
         [width, left]
