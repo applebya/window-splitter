@@ -1,5 +1,7 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const FrameInner: React.FC = props => <section>{props.children}</section>;
+const FrameInner = styled.section.attrs({
+    className: 'WindowSplitter-FrameInner'
+})``;
 
 export default FrameInner;
