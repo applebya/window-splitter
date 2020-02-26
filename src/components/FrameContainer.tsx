@@ -80,7 +80,7 @@ const FrameContainer: React.FC = props => {
 
     const handleMouseMove = useCallback(
         ({ clientX }) => {
-            if (!left || !width) return;
+            if (left === null || width === null) return;
 
             setWidthPercent(((clientX - left) / width) * 100);
         },

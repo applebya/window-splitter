@@ -6,6 +6,10 @@ context('Window Frame Dragging', () => {
     });
 
     it('drags the divider in the full-width window ', () => {
+        cy.get('.WindowSplitter-FrameInner')
+            .first()
+            .should('have.css', 'width', '496px');
+
         cy.get('.WindowSplitter-Divider')
             .first()
             .trigger('mousedown', { which: 1 })
@@ -14,10 +18,14 @@ context('Window Frame Dragging', () => {
 
         cy.get('.WindowSplitter-FrameInner')
             .first()
-            .should('have.css', 'width', '496px');
+            .should('have.css', 'width', '299.390625px');
     });
 
     it('drags the divider in the partial-width window', () => {
+        cy.get('.WindowSplitter-FrameInner')
+            .eq(2)
+            .should('have.css', 'width', '372px');
+
         cy.get('.WindowSplitter-Divider')
             .last()
             .trigger('mousedown', { which: 1 })
