@@ -13,6 +13,10 @@ const Wrapper = styled.div`
 const ConstrainedFrame = styled(Frame)`
     width: 75%;
     margin: 0px auto;
+
+    ${Frame}:last-child {
+        color: red;
+    }
 `;
 
 function App() {
@@ -63,12 +67,19 @@ function App() {
                 <Frame>
                     Hearties smartly broadside measured fer yer chains Pirate
                     Round hornswaggle pink Plate Fleet dance the hempen jig
-                    bilged on her anchor swing the lead.
+                    bilged on her anchor swing the lead. Jack reef barkadeer
+                    maroon hornswaggle dead men tell no tales code of conduct
+                    Buccaneer hempen halter scuttle spirits.
                 </Frame>
                 <Frame>
                     Hearties smartly broadside measured fer yer chains Pirate
                     Round hornswaggle pink Plate Fleet dance the hempen jig
-                    bilged on her anchor swing the lead.
+                    bilged on her anchor swing the lead. Sea Legs hardtack
+                    yo-ho-ho lateen sail marooned execution dock coffer lookout
+                    furl scurvy American Main. Hearties smartly broadside
+                    measured fer yer chains Pirate Round hornswaggle pink Plate
+                    Fleet dance the hempen jig bilged on her anchor swing the
+                    lead.
                 </Frame>
             </ConstrainedFrame>
         </Wrapper>
