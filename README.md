@@ -14,7 +14,7 @@ Unsure whether the device orientation would have an impact here, since my soluti
 
 ##### Multiple Panes
 
-This would certainly add complexity to the application state, since there would be 2+ dividers to move around. Instead of representing the width percentage as a number, it'd become an array of percentages - the length being equal to the # of dividers.
+This would certainly add complexity to the application state, since there would be 2+ dividers to move around. Instead of representing the width percentage as a number, it'd become an array of percentages - the length being equal to the # of dividers. It'd also need to handle the case of adding & removing frames on-demand.
 
 ##### How to make the component style engine independent?
 
@@ -26,7 +26,7 @@ The `touchstart` and `touchend` events would also need to be listened for and ha
 
 ##### Nested Window Splitters
 
-I haven't tried it, but nested window splitters should technically work with the current implementation. If I hadn't set this up as composeable components, but rather make it a black-box component with props accepting components, then there might've been some roadblocks.
+I haven't tried it, but nested window splitters should technically work with the current implementation. If I hadn't set this up as composeable components, but rather made it a black-box component with props accepting components, then there might've been some roadblocks.
 
 # Run the App!
 
