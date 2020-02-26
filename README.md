@@ -6,17 +6,29 @@ A demo showing how React Hooks can be leveraged to create a draggable window spl
 
 Once you are done with the above task, we would like to hear your thoughts on how you would implement the following (API and overall technical choices, no implementation):
 
-### Thoughts on future improvements:
+### Thoughts on future improvements
 
 ##### Horizontal Orientation
 
+Unsure whether the device orientation would have an impact here, since my solution based on percentages. Resizing the browser window (or rotating your smartphone/tablet) would still preserve the proportion of each frame to one another.
+
 ##### Multiple Panes
+
+This would certainly add complexity to the application state, since there would be 2+ dividers to move around. Instead of representing the width percentage as a number, it'd become an array of percentages - the length being equal to the # of dividers.
 
 ##### How to make the component style engine independent?
 
+There aren't many styles within the Frame components, so those could easily be moved into a CSS file and imported (rather than using styled-components). The `<FrameContainer />` and `<FrameInner />` components would certainly keep their `className?: string` prop, so the end-user could still use their own CSS-in-JS solution. The unique classNames I added for each component (ex: `"WindowSplitter-FrameContainer"`) would be suitable for any other styling solution.
+
 ##### Touch Screens Support
 
+The `touchstart` and `touchend` events would also need to be listened for and handled. I haven't come across a case to handle this (often going for a react library for dragging), but it'd be super interesting to learn more about.
+
 ##### Nested Window Splitters
+
+I haven't tried it, but nested window splitters should technically work with the current implementation. If I hadn't set this up as composeable components, but rather make it a black-box component with props accepting components, then there might've been some roadblocks.
+
+# Run the App!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
