@@ -4,8 +4,6 @@ A demo showing how React Hooks can be leveraged to create a draggable window spl
 
 ![WindowSplitter](https://camo.githubusercontent.com/a0bf0d97ed76c5900458214b024ffe015a23c86f/68747470733a2f2f676973742e6769746875622e636f6d2f6f6c697669657274617373696e6172692f33386535303036366466383839346137633465306234366233396234326362382f7261772f6368726f6d652d6465762d746f6f6c732e676966)
 
-Once you are done with the above task, we would like to hear your thoughts on how you would implement the following (API and overall technical choices, no implementation):
-
 ### Thoughts on future improvements
 
 ##### Horizontal Orientation
